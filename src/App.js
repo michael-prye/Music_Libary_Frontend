@@ -10,7 +10,7 @@ useEffect(()=>{
 
 async function getAllSongs(){
   try{
-    let response = await axios.get('http://127.0.0.1:8000/api/music');
+    let response = await axios.get('http://127.0.0.1:8000/api/music/');
     console.log(response.data);
     setSongs(response.data);
   }catch (ex){
@@ -18,14 +18,8 @@ async function getAllSongs(){
   }
 
 }
-console.log({songs})
-
-
-
-
   return (
     <div>
-      
     </div>
   );
 }
