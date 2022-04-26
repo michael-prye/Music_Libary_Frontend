@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import DisplayMusic from './Components/DisplayMusic/DisplayMusic';
+
 function App() {
 
 const [songs, setSongs] = useState([]);
@@ -20,6 +22,7 @@ async function getAllSongs(){
 }
   return (
     <div>
+      <DisplayMusic songs = {songs}/>
     </div>
   );
 }
