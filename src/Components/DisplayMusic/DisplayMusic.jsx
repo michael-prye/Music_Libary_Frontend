@@ -1,6 +1,7 @@
 import Song from "../Song/Song";
 import React from "react";
-import { Carousel } from "bootstrap";
+import "./DisplayMusic.css"
+//import Carousel from 'react-bootstrap/Carousel'
 
 
 
@@ -8,39 +9,31 @@ import { Carousel } from "bootstrap";
 
 const DisplayMusic = (props) => {
     return (
-        <Carousel>
-            {props.song.map((song)=>{
-                return(
-                    <Carousel.Item>
-                        <Song title = {song.title} artist={song.artist} album = {song.album} album_art={song.album_art} release_date = {song.release_date} genre={song.genre} likes={song.likes} />                        
-                    </Carousel.Item>
-                )
-            }
-            )}
-        </Carousel>
+        <table class='table'>
+            <tbody>
+                {props.songs.map((song)=>{
+                    return(
+                        <td><Song id = {song.id}title = {song.title} artist={song.artist} album = {song.album} album_art={song.album_art} release_date = {song.release_date} genre={song.genre} likes={song.likes} /></td>
+                    )
+                }
 
-        // <table>
-        //     <tbody>
-        //         {props.songs.map((song)=>{
-        //             return(
-        //                 <tr><Song title = {song.title} artist={song.artist} album = {song.album} album_art={song.album_art} release_date = {song.release_date} genre={song.genre} likes={song.likes} /></tr>
-        //             )
-        //         }
+                )}
+            </tbody>
+        </table>
 
-        //         )}
-        //     </tbody>
-        // </table>
+        //         <Carousel cols={2} rows={1} gap={10} loop>
+        //     {props.songs.map((song)=>{
+        //         return(
+        //             <Carousel.Item>
+        //                 <Song title = {song.title} artist={song.artist} album = {song.album} album_art={song.album_art} release_date = {song.release_date} genre={song.genre} likes={song.likes} />                        
+        //             </Carousel.Item>
+        //         )
+        //     }
+        //     )}
+        // </Carousel>
 
 
     );
 }
  
 export default DisplayMusic;
-
-// {props.songs.map((song)=>{
-//     return(
-//         <tr><Song title = {song.title} artist={song.artist} album = {song.album} album_art={song.album_art} release_date = {song.release_date} genre={song.genre} likes={song.likes} /></tr>
-//     )
-// }
-
-// )}

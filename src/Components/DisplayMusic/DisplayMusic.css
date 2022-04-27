@@ -1,0 +1,9 @@
+.table{
+    display: grid;
+    grid-template-areas:
+        "top top top"
+        "mid mid mid"
+        "mid mid mid"
+        "mid mid mid"
+        "bot bot bot";
+}
