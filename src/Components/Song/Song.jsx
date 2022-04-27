@@ -1,4 +1,5 @@
 import DeleteButton from "./DeleteButton/DeleteButton";
+import LikeButton from "./LikeButton/LikeButton";
 
 const Song = (props) => {
     return (
@@ -13,6 +14,7 @@ const Song = (props) => {
             <h3>{props.genre}</h3>
             <h3>{props.likes}</h3>
             <DeleteButton id ={props.id}/>
+            <LikeButton id = {props.id}/>
 
         </div>        
      );

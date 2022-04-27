@@ -5,8 +5,8 @@ import axios from 'axios';
 const DeleteButton = (props) => {
     async function deleteButton(){
         try{
-            let response = await axios.delete('http://127.0.0.1:8000/api/music/' + props.id)
-  
+            let response = await axios.delete('http://127.0.0.1:8000/api/music/' + props.id + '/')
+            console.log(response.data)
         }catch(ex){
             console.log('Unable to delete')
         }
