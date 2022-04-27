@@ -7,10 +7,9 @@ import { Carousel } from "bootstrap";
 
 
 const DisplayMusic = (props) => {
-    const song = props.song;
     return (
         <Carousel>
-            {song.map((song)=>{
+            {props.song.map((song)=>{
                 return(
                     <Carousel.Item>
                         <Song title = {song.title} artist={song.artist} album = {song.album} album_art={song.album_art} release_date = {song.release_date} genre={song.genre} likes={song.likes} />                        

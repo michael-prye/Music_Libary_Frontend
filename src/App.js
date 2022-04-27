@@ -8,7 +8,7 @@ const [songs, setSongs] = useState([]);
 
 useEffect(()=>{
   getAllSongs();
-},)
+},[])
 
 async function getAllSongs(){
   try{
