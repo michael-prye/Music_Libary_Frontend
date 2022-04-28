@@ -3,7 +3,7 @@ import LikeButton from "./LikeButton/LikeButton";
 
 const Song = (props) => {
     return (
-        <div>
+        <div className="card">
             <img src={props.album_art} alt="" />
 
             

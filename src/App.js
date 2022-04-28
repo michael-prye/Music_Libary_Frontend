@@ -3,6 +3,11 @@ import axios from 'axios';
 import DisplayMusic from './Components/DisplayMusic/DisplayMusic';
 import AddSong from './Components/AddSong/AddSong';
 import FilterSongs from './Components/FilterSongs/FilterSongs';
+import Navbar from 'react-bootstrap/Navbar'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import { NavDropdown } from 'react-bootstrap';
+
 
 function App() {
 const [songs, setSongs] = useState([]);
@@ -35,10 +40,18 @@ function applyFilter(category, userInput){
 }
   return (
     <div>
+      <Navbar bg="light" expand="lg">
+  <Container>
+    <Navbar.Brand>Music Libary</Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    
+  </Container>
+</Navbar>
+      
      
       <FilterSongs songs = {songs} applyFilter = {applyFilter}/>
       <DisplayMusic songs = {songs} getAllSongs= {getAllSongs}/>
-      <AddSong/>
+      <AddSong getAllSongs= {getAllSongs}/>
      
       
     </div>

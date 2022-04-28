@@ -9,8 +9,8 @@ import "./DisplayMusic.css"
 
 const DisplayMusic = (props) => {
     return (
-        <table class='table'>
-            <tbody>
+        <table>
+            <tbody className="grid" >
                 {props.songs.map((song)=>{
                     return(
                         <td><Song getAllSongs = {props.getAllSongs} id = {song.id}title = {song.title} artist={song.artist} album = {song.album} album_art={song.album_art} release_date = {song.release_date} genre={song.genre} likes={song.likes} /></td>

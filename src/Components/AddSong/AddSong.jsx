@@ -11,7 +11,7 @@ const AddSong = (props) => {
     const [inputDate, setInputDate] = useState('')
 
 
-    async function addSong(){
+    async function addSong(){ 
         try{
             let response = await axios.post('http://127.0.0.1:8000/api/music/', {
                 title: inputTitle,
@@ -22,12 +22,14 @@ const AddSong = (props) => {
                 release_date: inputDate,
                 likes: "0"
             })
+            props.getAllSongs();
             setInputTitle('');
             setInputArtist('');
             setInputAlbum('');
             setInputAlbumArt('');
             setInputGenre('');
             setInputDate('');
+
 
         }catch(response){
             console.log(response)
