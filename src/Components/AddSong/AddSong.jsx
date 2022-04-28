@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useEffect, useState } from 'react'
+import {useState} from 'react'
 import Button from 'react-bootstrap/Button'
 
 const AddSong = (props) => {
@@ -17,13 +17,13 @@ const AddSong = (props) => {
                 title: inputTitle,
                 artist: inputArtist,
                 album: inputAlbum,
-                albumArt: inputAlbumArt,
+                album_art: inputAlbumArt,
                 genre: inputGenre,
                 release_date: inputDate,
-                likes: '0'
+                likes: "0"
             })
-        }catch(error){
-            console.log(error)
+        }catch(response){
+            console.log(response)
             
         }
     }
