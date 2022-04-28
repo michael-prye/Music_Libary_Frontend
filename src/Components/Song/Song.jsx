@@ -1,5 +1,6 @@
 import DeleteButton from "./DeleteButton/DeleteButton";
 import LikeButton from "./LikeButton/LikeButton";
+import UpdateSong from "./UpdateSong/UpdateSong";
 
 const Song = (props) => {
     return (
@@ -15,6 +16,7 @@ const Song = (props) => {
             <h3>{props.likes}</h3>
             <DeleteButton id ={props.id} getAllSongs = {props.getAllSongs}/>
             <LikeButton id = {props.id} getAllSongs = {props.getAllSongs}/>
+            <UpdateSong/>
 
         </div>        
      );
