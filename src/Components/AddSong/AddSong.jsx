@@ -24,7 +24,7 @@ const AddSong = (props) => {
             })
         }catch(error){
             console.log(error)
-            console.log('you are a failure')
+            
         }
     }
     function handleSubmit(event){
