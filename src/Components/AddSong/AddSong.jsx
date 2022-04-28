@@ -22,6 +22,13 @@ const AddSong = (props) => {
                 release_date: inputDate,
                 likes: "0"
             })
+            setInputTitle('');
+            setInputArtist('');
+            setInputAlbum('');
+            setInputAlbumArt('');
+            setInputGenre('');
+            setInputDate('');
+
         }catch(response){
             console.log(response)
             
