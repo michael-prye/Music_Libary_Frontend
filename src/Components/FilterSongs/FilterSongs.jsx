@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Modal from 'react-bootstrap/Modal'
-import axios from 'axios';
+
 
 
 const FilterSongs = (props) => {
@@ -49,7 +49,7 @@ const FilterSongs = (props) => {
     function handleReset() {
         setDropDownOne("All");
         setSongFilter("");
-        props.applyFilter(dropDownOne, songFilter);
+        props.applyFilter("All", "");
 
 
     }
