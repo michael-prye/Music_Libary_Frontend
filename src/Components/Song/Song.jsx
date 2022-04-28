@@ -13,8 +13,8 @@ const Song = (props) => {
             <h3>{props.release_date}</h3>
             <h3>{props.genre}</h3>
             <h3>{props.likes}</h3>
-            <DeleteButton id ={props.id}/>
-            <LikeButton id = {props.id}/>
+            <DeleteButton id ={props.id} getAllSongs = {props.getAllSongs}/>
+            <LikeButton id = {props.id} getAllSongs = {props.getAllSongs}/>
 
         </div>        
      );

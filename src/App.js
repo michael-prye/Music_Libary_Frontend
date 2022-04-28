@@ -37,7 +37,7 @@ function applyFilter(category, userInput){
     <div>
      
       <FilterSongs songs = {songs} applyFilter = {applyFilter}/>
-      <DisplayMusic songs = {songs}/>
+      <DisplayMusic songs = {songs} getAllSongs= {getAllSongs}/>
       <AddSong/>
      
       
